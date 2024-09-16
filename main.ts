@@ -132,7 +132,7 @@ export default class MyPlugin extends Plugin {
         const absOutputFolderPath = adapter.getFullRealPath(this.settings.outputPath);
         const drawingFilePath = path.join(absOutputFolderPath, drawingFileName);
 
-        let args = ['-o', drawingFilePath, '-s', rmAddress];
+        let args = ['-p','-o', drawingFilePath, '-s', rmAddress];
         if(landscape) {
             args = args.concat(['-l']);
         }
